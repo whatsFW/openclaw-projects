@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>登录</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f5f5f7;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .login-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+      padding: 32px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .login-card {
+        width: 400px;
+      }
+    }
+
+    .login-card h1 {
+      font-size: 22px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    .form-group input {
+      display: block;
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 12px;
+      font-size: 16px;
+      color: #111827;
+      background: #ffffff;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .form-group input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .form-group.has-error input {
+      border-color: #dc2626;
+    }
+
+    .form-group.has-error input:focus {
+      border-color: #dc2626;
+      box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+    }
+
+    .error-message {
+      font-size: 13px;
+      color: #dc2626;
+      margin-top: 4px;
+      min-height: 18px;
+    }
+
+    .password-wrapper {
+      position: relative;
+    }
+
+    .password-wrapper input {
+      padding-right: 44px;
+    }
+
+    .password-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 44px;
+      height: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6b7280;
+      padding: 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .password-toggle:hover {
+      color: #374151;
+    }
+
+    .password-toggle:focus {
+      outline: 2px solid #2563eb;
+      outline-offset: -2px;
+    }
+
+    .password-toggle svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .login-btn {
+      display: block;
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 16px;
+      margin-top: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #ffffff;
+      background-color: #2563eb;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    .login-btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .login-btn:active {
+      background-color: #1e40af;
+    }
+
+    .login-btn:focus {
+      outline: 2px solid #2563eb;
+      outline-offset: 2px;
+    }
+
+    .login-btn:disabled {
+      background-color: #93c5fd;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <h1>登录</h1>
+    <form id="login-form" novalidate>
+      <div class="form-group" id="username-group">
+        <label for="username">账号</label>
+        <input
+          id="username"
+          type="text"
+          autocomplete="username"
+          placeholder="请输入账号"
+        >
+        <p class="error-message" id="username-error"></p>
+      </div>
+
+      <div class="form-group" id="password-group">
+        <label for="password">密码</label>
+        <div class="password-wrapper">
+          <input
+            id="password"
+            type="password"
+            autocomplete="current-password"
+            placeholder="请输入密码"
+          >
+          <button
+            type="button"
+            class="password-toggle"
+            aria-label="显示密码"
+            id="password-toggle"
+          >
+            <svg id="eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+            <svg id="eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+              <line x1="1" y1="1" x2="23" y2="23"/>
+            </svg>
+          </button>
+        </div>
+        <p class="error-message" id="password-error"></p>
+      </div>
+
+      <button type="submit" class="login-btn" id="login-btn">登录</button>
+    </form>
+  </div>
+
+  <script>
+    (function () {
+      // --- 常量 ---
+      var LOADING_DURATION_MS = 1200;
+      var ERRORS = {
+        username: '请输入账号',
+        password: '请输入密码'
+      };
+
+      // --- DOM 引用 ---
+      var form = document.getElementById('login-form');
+      var usernameInput = document.getElementById('username');
+      var passwordInput = document.getElementById('password');
+      var usernameGroup = document.getElementById('username-group');
+      var passwordGroup = document.getElementById('password-group');
+      var usernameError = document.getElementById('username-error');
+      var passwordError = document.getElementById('password-error');
+      var loginBtn = document.getElementById('login-btn');
+      var passwordToggle = document.getElementById('password-toggle');
+      var eyeOpen = document.getElementById('eye-open');
+      var eyeClosed = document.getElementById('eye-closed');
+
+      var isPasswordVisible = false;
+      var isLoading = false;
+
+      // --- 自动聚焦 ---
+      usernameInput.focus();
+
+      // --- 错误管理 ---
+      function showError(field) {
+        var group = field === 'username' ? usernameGroup : passwordGroup;
+        var el = field === 'username' ? usernameError : passwordError;
+        group.classList.add('has-error');
+        el.textContent = ERRORS[field];
+      }
+
+      function clearError(field) {
+        var group = field === 'username' ? usernameGroup : passwordGroup;
+        var el = field === 'username' ? usernameError : passwordError;
+        group.classList.remove('has-error');
+        el.textContent = '';
+      }
+
+      function clearAllErrors() {
+        clearError('username');
+        clearError('password');
+      }
+
+      // --- 输入时清除错误 ---
+      usernameInput.addEventListener('input', function () {
+        if (usernameGroup.classList.contains('has-error')) {
+          clearError('username');
+        }
+      });
+
+      passwordInput.addEventListener('input', function () {
+        if (passwordGroup.classList.contains('has-error')) {
+          clearError('password');
+        }
+      });
+
+      // --- 密码切换 ---
+      passwordToggle.addEventListener('click', function () {
+        isPasswordVisible = !isPasswordVisible;
+        passwordInput.type = isPasswordVisible ? 'text' : 'password';
+        eyeOpen.style.display = isPasswordVisible ? 'none' : 'block';
+        eyeClosed.style.display = isPasswordVisible ? 'block' : 'none';
+        passwordToggle.setAttribute('aria-label', isPasswordVisible ? '隐藏密码' : '显示密码');
+      });
+
+      // --- 表单提交 ---
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearAllErrors();
+
+        if (isLoading) {
+          return;
+        }
+
+        var hasError = false;
+
+        if (usernameInput.value.trim() === '') {
+          showError('username');
+          hasError = true;
+        }
+
+        if (passwordInput.value.trim() === '') {
+          showError('password');
+          hasError = true;
+        }
+
+        if (hasError) {
+          return;
+        }
+
+        // Loading 态
+        isLoading = true;
+        loginBtn.disabled = true;
+        loginBtn.textContent = '登录中…';
+
+        setTimeout(function () {
+          isLoading = false;
+          loginBtn.disabled = false;
+          loginBtn.textContent = '登录';
+        }, LOADING_DURATION_MS);
+      });
+    })();
+  </script>
+</body>
+</html>
