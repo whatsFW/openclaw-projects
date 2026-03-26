@@ -1,0 +1,46 @@
+{
+  "project": "root-openclaw-projects-projects-task-20260327-011331",
+  "run_id": "20260327_011331",
+  "run_dir": "/root/.openclaw/shared/pipeline-runs/root-openclaw-projects-projects-task-20260327-011331/20260327_011331",
+  "thinking": "medium",
+  "timeout": 3600,
+  "started_at": "2026-03-27T01:13:31.785245",
+  "steps": [
+    {
+      "role": "pm-ideal",
+      "outfile": "03_pm_ideal_debate.md",
+      "path": "/root/.openclaw/shared/pipeline-runs/root-openclaw-projects-projects-task-20260327-011331/20260327_011331/03_pm_ideal_debate.md",
+      "status_hint": "UNKNOWN"
+    },
+    {
+      "role": "pm-real",
+      "outfile": "04_pm_real_debate.md",
+      "path": "/root/.openclaw/shared/pipeline-runs/root-openclaw-projects-projects-task-20260327-011331/20260327_011331/04_pm_real_debate.md",
+      "status_hint": "PASS"
+    },
+    {
+      "role": "research",
+      "outfile": "02_research_digest.md",
+      "path": "/root/.openclaw/shared/pipeline-runs/root-openclaw-projects-projects-task-20260327-011331/20260327_011331/02_research_digest.md",
+      "status_hint": "UNKNOWN"
+    },
+    {
+      "role": "pm-core",
+      "outfile": "05_product_spec.md",
+      "path": "/root/.openclaw/shared/pipeline-runs/root-openclaw-projects-projects-task-20260327-011331/20260327_011331/05_product_spec.md",
+      "status_hint": "PASS"
+    },
+    {
+      "role": "architect",
+      "outfile": "06_architecture_spec.md",
+      "path": "/root/.openclaw/shared/pipeline-runs/root-openclaw-projects-projects-task-20260327-011331/20260327_011331/06_architecture_spec.md",
+      "status_hint": "FAIL"
+    },
+    {
+      "role": "security",
+      "outfile": "07_security_preflight_review.md",
+      "path": "/root/.openclaw/shared/pipeline-runs/root-openclaw-projects-projects-task-20260327-011331/20260327_011331/07_security_preflight_review.md",
+      "status_hint": "FAIL"
+    }
+  ]
+}

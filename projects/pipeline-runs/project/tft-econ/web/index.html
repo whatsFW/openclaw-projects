@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TFT 经济模拟器 — 连胜/连败策略分析</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #0f172a; color: #e2e8f0; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+    h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+    .subtitle { font-size: 14px; color: #94a3b8; margin-bottom: 32px; }
+    .grid { display: grid; grid-template-columns: 280px 1fr; gap: 24px; }
+    .panel { background: #1e293b; border-radius: 12px; padding: 20px; }
+    .panel h2 { font-size: 15px; font-weight: 600; margin-bottom: 16px; color: #f1f5f9; }
+    .param-group { margin-bottom: 20px; }
+    .param-group label { display: block; font-size: 13px; color: #94a3b8; margin-bottom: 6px; }
+    .param-group input[type="range"] { width: 100%; accent-color: #3b82f6; }
+    .param-group .value { font-size: 14px; font-weight: 600; color: #e2e8f0; float: right; }
+    .strategy-check { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .strategy-check input { accent-color: currentColor; }
+    .strategy-check .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+    .strategy-check span { font-size: 14px; }
+    .btn { width: 100%; padding: 10px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .btn-primary { background: #3b82f6; color: #fff; }
+    .btn-primary:hover { background: #2563eb; }
+    .btn-secondary { background: #334155; color: #94a3b8; }
+    .btn-secondary:hover { background: #475569; color: #e2e8f0; }
+    #chart-main { width: 100%; height: 450px; }
+    #chart-distribution { width: 100%; height: 300px; }
+    .recommendation { background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 12px 16px; margin-top: 16px; font-size: 14px; }
+    .recommendation strong { color: #22d3ee; }
+    .perf { font-size: 12px; color: #64748b; margin-top: 8px; }
+    .chart-wrap { background: #1e293b; border-radius: 12px; padding: 20px; }
+    .chart-title { font-size: 15px; font-weight: 600; margin-bottom: 12px; color: #f1f5f9; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 TFT 经济模拟器</h1>
+    <p class="subtitle">金铲铲之战连胜/连败策略分析 — 纯经济变量建模 + 蒙特卡洛模拟</p>
+
+    <div class="grid">
+      <!-- 左侧参数面板 -->
+      <div>
+        <div class="panel">
+          <h2>📊 策略选择</h2>
+          <div id="strategy-list"></div>
+        </div>
+
+        <div class="panel" style="margin-top: 16px;">
+          <h2>⚙️ 参数配置</h2>
+
+          <div class="param-group">
+            <label>回合数 <span class="value" id="val-rounds">20</span></label>
+            <input type="range" id="param-rounds" min="5" max="30" value="20">
+          </div>
+
+          <div class="param-group">
+            <label>基础收入 <span class="value" id="val-base">5</span></label>
+            <input type="range" id="param-base" min="3" max="10" value="5">
+          </div>
+
+          <div class="param-group">
+            <label>利息上限 <span class="value" id="val-cap">5</span></label>
+            <input type="range" id="param-cap" min="0" max="10" value="5">
+          </div>
+
+          <div class="param-group">
+            <label>连胜/连败 ×5 奖励 <span class="value" id="val-streak5">3</span></label>
+            <input type="range" id="param-streak5" min="0" max="6" value="3">
+          </div>
+
+          <div class="param-group">
+            <label>蒙特卡洛次数 <span class="value" id="val-sims">1000</span></label>
+            <input type="range" id="param-sims" min="100" max="5000" step="100" value="1000">
+          </div>
+
+          <button class="btn btn-primary" id="btn-run">运行模拟</button>
+          <button class="btn btn-secondary" id="btn-recommend">推荐最优策略</button>
+          <div class="perf" id="perf-info"></div>
+        </div>
+      </div>
+
+      <!-- 右侧图表 -->
+      <div>
+        <div class="chart-wrap">
+          <div class="chart-title">金币积累曲线（蒙特卡洛平均值）</div>
+          <div id="chart-main"></div>
+        </div>
+
+        <div class="chart-wrap" style="margin-top: 16px;">
+          <div class="chart-title">最终金币分布（箱线图）</div>
+          <div id="chart-distribution"></div>
+        </div>
+
+        <div class="recommendation" id="recommendation" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

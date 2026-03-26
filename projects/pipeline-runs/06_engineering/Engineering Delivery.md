@@ -6,8 +6,8 @@
 - phase: Phase 7 工程实现
 - version: v3
 - status: FINAL
-- date: 2026-03-26
-- related_task: task-20260326-190327
+- date: 2026-03-27
+- related_task: task-20260327-011331
 - upstream_inputs: `05_product_spec.md` (v1), `06_architecture_spec.md` (v1), `22_pm_review_round_2.md` (v1), `32_security_review_round_2.md` (v1)
 - downstream_target: chief
 
@@ -23,7 +23,7 @@
 
 | 轮次 | 来源 | 问题 | 状态 |
 |---|---|---|---|
-| Round 1 | PM | PASS（2 FIX） | ✅ Round 2 修复 |
+| Round 1 | PM | PASS（1 FIX） | ✅ Round 2 修复 |
 | Round 1 | Security | PASS | ✅ |
 | Round 2 | PM | PASS · 最终签收 | ✅ |
 | Round 2 | Security | PASS · 最终发布 | ✅ |
@@ -33,27 +33,23 @@
 ## Final Delivery
 
 ### Canonical Project Root
-`/root/openclaw-projects/projects/pipeline-runs/project/wfood/`
+`/root/openclaw-projects/projects/pipeline-runs/project/tft-econ/`
 
 ### Run
-```bash
-cd wfood && npm install && npm run dev
-```
+- **网站：** HTTP 服务器打开 `web/index.html`（如 `python -m http.server 8080`）
+- **模型测试：** `node model/test.js`
 
 ### Build
-```bash
-cd wfood && npm run build
-```
+- 无构建步骤（ES Module + ECharts CDN）
 
 ### Deploy
-- `npm run build` 后部署 `dist/` 到任意静态文件服务器
+- 静态文件部署，需 HTTP 服务器
 
 ### Env
-- Node.js ≥ 18
-- npm
+- 现代浏览器 + 本地 HTTP 服务器
+- Node.js（运行 model 验证）
 
 ### Known Limitations
-- 无搜索/筛选/评价/订单历史/地址管理/真实支付/商家后台/骑手端
-- Mock 用户数据明文存储（已标注）
-- 无移动端适配
-- 无单元测试
+- 纯攒利息在当前模型下始终最优（可能需调整）
+- 无策略自定义功能
+- 无数据导出功能
