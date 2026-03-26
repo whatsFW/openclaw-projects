@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IMO 风车题可视化</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>IMO 2011 #2 · 风车题</h1>
+      <div class="controls">
+        <label>点数</label>
+        <input type="number" id="point-count" value="10" min="3" max="50">
+        <button class="btn" id="btn-random">随机生成</button>
+        <button class="btn btn-s" id="btn-clear">清空</button>
+        <span style="width:1px;height:20px;background:#334155"></span>
+        <button class="btn" id="btn-toggle">开始</button>
+        <button class="btn btn-s" id="btn-step">单步</button>
+        <button class="btn btn-s" id="btn-reset">重置</button>
+      </div>
+    </header>
+    <div class="canvas-wrap">
+      <canvas id="canvas"></canvas>
+      <div class="bar">
+        <span><span class="label">步数</span> <span class="value" id="step-count">0</span> <span class="label">/ 200</span></span>
+        <span><span class="label">支点</span> <span class="value" id="pivot-label">-</span></span>
+        <span class="spd">
+          <span class="label">速度</span>
+          <input type="range" id="speed-slider" min="1" max="10" value="3">
+          <span class="sv" id="speed-label">3x</span>
+        </span>
+      </div>
+      <div id="file-warn">
+        <div class="icon">⚠️</div>
+        <div class="title">需要本地 HTTP 服务器</div>
+        <div class="desc">ES Module 在 file:// 下无法加载。<br>请运行：<br><br><code>python -m http.server 8080</code><br><br>然后访问 <code>http://localhost:8080</code></div>
+      </div>
+    </div>
+  </div>
+  <script>if(window.location.protocol==='file:')document.getElementById('file-warn').style.display='block';</script>
+  <script type="module" src="main.js"></script>
+  <noscript>请启用 JavaScript。</noscript>
+</body>
+</html>
