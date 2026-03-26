@@ -1,0 +1,148 @@
+/* Design Token — 轻度拟物化 */
+
+:root {
+  /* ── 配色 ── */
+  --color-primary: #22c55e;
+  --color-primary-hover: #16a34a;
+  --color-primary-active: #15803d;
+  --color-accent: #f97316;
+  --color-accent-hover: #ea580c;
+
+  --color-bg: #ffffff;
+  --color-bg-page: #faf9f6;
+  --color-nav-bg: #f3f1ee;
+  --color-text: #333333;
+  --color-text-light: #888888;
+  --color-border: #e0ddd8;
+
+  /* ── 拟物化阴影 ── */
+  --shadow-light: rgba(0, 0, 0, 0.06);
+  --shadow-sm: rgba(0, 0, 0, 0.08);
+  --shadow-md: rgba(0, 0, 0, 0.12);
+
+  /* 凸起阴影（按钮/卡片） */
+  --shadow-convex: 0 2px 4px var(--shadow-sm), 0 4px 12px var(--shadow-light);
+
+  /* 内凹阴影（输入框） */
+  --shadow-concave: inset 0 2px 4px var(--shadow-sm), inset 0 1px 2px var(--shadow-light);
+
+  /* 按下效果 */
+  --shadow-pressed: inset 0 2px 6px var(--shadow-md), inset 0 1px 2px var(--shadow-sm);
+
+  /* ── 圆角 ── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* ── 动画 ── */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+
+  /* ── 字体 ── */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* ── 全局 Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg-page);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════
+   拟物化组件
+   ══════════════════════════════════════ */
+
+/* ── 按钮 ── */
+.btn-skeuo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.btn-skeuo--primary {
+  color: #fff;
+  background: linear-gradient(to bottom, #26d066, var(--color-primary));
+  border-color: var(--color-primary-active);
+  box-shadow: var(--shadow-convex), inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.btn-skeuo--primary:hover {
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-hover));
+}
+.btn-skeuo--primary:active {
+  background: var(--color-primary-active);
+  box-shadow: var(--shadow-pressed);
+}
+.btn-skeuo--primary:disabled {
+  background: #ccc;
+  border-color: #bbb;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-skeuo--secondary {
+  color: var(--color-text);
+  background: linear-gradient(to bottom, #fff, #f5f3f0);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-convex), inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.btn-skeuo--secondary:hover {
+  background: linear-gradient(to bottom, #f9f7f4, #eeebe7);
+}
+.btn-skeuo--secondary:active {
+  background: #e8e5e1;
+  box-shadow: var(--shadow-pressed);
+}
+
+/* ── 输入框 ── */
+.input-skeuo {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--color-text);
+  background: linear-gradient(to bottom, #f7f5f2, #fff);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-concave), inset 0 1px 0 rgba(255,255,255,0.5);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.input-skeuo:focus {
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-concave), 0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+.input-skeuo::placeholder {
+  color: #bbb;
+}
+
+/* ── 卡片 ── */
+.card-skeuo {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-convex);
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: box-shadow var(--transition-fast);
+}
+
+/* ── 滚动条 ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #aaa; }

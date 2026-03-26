@@ -1,0 +1,202 @@
+[
+  {
+    "id": "s1",
+    "name": "老王烧烤",
+    "image": "https://via.placeholder.com/300x200/f97316/fff?text=烧烤",
+    "rating": 4.8,
+    "monthlySales": 3200,
+    "deliveryFee": 3,
+    "deliveryTime": 28,
+    "notice": "烧烤类满 30 元送鸡翅一对",
+    "goods": [
+      { "id": "g1", "name": "羊肉串（10串）", "price": 38, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=羊肉串", "description": "精选新疆羊肉，现穿现烤" },
+      { "id": "g2", "name": "烤鸡翅（2只）", "price": 16, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=鸡翅", "description": "蜜汁调味，外焦里嫩" },
+      { "id": "g3", "name": "烤韭菜", "price": 12, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=韭菜", "description": "翠绿鲜嫩，蒜香扑鼻" },
+      { "id": "g4", "name": "烤金针菇", "price": 14, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=金针菇", "description": "锡纸包裹，鲜香入味" },
+      { "id": "g5", "name": "冰啤酒", "price": 8, "image": "https://via.placeholder.com/120x80/3b82f6/fff?text=啤酒", "description": "青岛纯生 330ml" },
+      { "id": "g51", "name": "烤五花肉", "price": 22, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=五花肉", "description": "肥瘦相间，外焦里嫩" },
+      { "id": "g52", "name": "烤鱿鱼", "price": 18, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=鱿鱼", "description": "鲜弹有嚼劲，刷酱提味" },
+      { "id": "g53", "name": "烤茄子", "price": 10, "image": "https://via.placeholder.com/120x80/8b5cf6/fff?text=茄子", "description": "整只烤制，蒜蓉浇顶" }
+    ]
+  },
+  {
+    "id": "s2",
+    "name": "湘味小厨",
+    "image": "https://via.placeholder.com/300x200/ef4444/fff?text=湘菜",
+    "rating": 4.6,
+    "monthlySales": 2800,
+    "deliveryFee": 2,
+    "deliveryTime": 22,
+    "notice": "辣度可选：微辣/中辣/特辣",
+    "goods": [
+      { "id": "g6", "name": "辣椒炒肉", "price": 28, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=炒肉", "description": "经典湘菜，家常味道" },
+      { "id": "g7", "name": "剁椒鱼头", "price": 58, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=鱼头", "description": "鲜辣入味，蒸制而成" },
+      { "id": "g8", "name": "农家小炒肉", "price": 26, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=小炒肉", "description": "五花肉配青椒，下饭利器" },
+      { "id": "g9", "name": "白米饭", "price": 3, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=米饭", "description": "东北大米，粒粒饱满" },
+      { "id": "g10", "name": "酸梅汤", "price": 6, "image": "https://via.placeholder.com/120x80/8b5cf6/fff?text=酸梅汤", "description": "冰镇解辣，一杯不够" },
+      { "id": "g54", "name": "毛氏红烧肉", "price": 36, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=红烧肉", "description": "肥而不腻，入口即化" },
+      { "id": "g55", "name": "干锅花菜", "price": 22, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=花菜", "description": "干香入味，微辣鲜香" },
+      { "id": "g56", "name": "紫苏煎蛋", "price": 15, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=煎蛋", "description": "紫苏提香，家常风味" }
+    ]
+  },
+  {
+    "id": "s3",
+    "name": "兰州拉面",
+    "image": "https://via.placeholder.com/300x200/f59e0b/fff?text=拉面",
+    "rating": 4.7,
+    "monthlySales": 4100,
+    "deliveryFee": 0,
+    "deliveryTime": 18,
+    "notice": "免费配送！招牌牛肉面 12 元",
+    "goods": [
+      { "id": "g11", "name": "牛肉拉面（大碗）", "price": 12, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=拉面", "description": "一清二白三红四绿五黄" },
+      { "id": "g12", "name": "牛肉拉面（小碗）", "price": 10, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=拉面", "description": "经典味道，分量刚好" },
+      { "id": "g13", "name": "牛肉板面", "price": 15, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=板面", "description": "宽面带劲，卤汁浓香" },
+      { "id": "g14", "name": "凉拌牛肉", "price": 22, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=牛肉", "description": "酱香入味，薄切爽口" },
+      { "id": "g15", "name": "茶叶蛋（2个）", "price": 4, "image": "https://via.placeholder.com/120x80/a16207/fff?text=茶叶蛋", "description": "入味三分，蛋白弹滑" },
+      { "id": "g57", "name": "牛肉拌面", "price": 14, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=拌面", "description": "手拉面条，牛肉浇头" },
+      { "id": "g58", "name": "胡辣汤", "price": 6, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=胡辣汤", "description": "麻辣鲜香，暖胃暖心" },
+      { "id": "g59", "name": "酸辣土豆丝", "price": 8, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=土豆丝", "description": "爽脆酸辣，开胃小菜" }
+    ]
+  },
+  {
+    "id": "s4",
+    "name": "黄焖鸡米饭",
+    "image": "https://via.placeholder.com/300x200/22c55e/fff?text=黄焖鸡",
+    "rating": 4.5,
+    "monthlySales": 3500,
+    "deliveryFee": 2,
+    "deliveryTime": 25,
+    "notice": "黄焖鸡米饭 + 可乐套餐 22 元",
+    "goods": [
+      { "id": "g16", "name": "黄焖鸡米饭", "price": 18, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=黄焖鸡", "description": "鸡肉鲜嫩，汤汁浓郁" },
+      { "id": "g17", "name": "黄焖排骨米饭", "price": 22, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=排骨", "description": "排骨软烂脱骨，拌饭绝配" },
+      { "id": "g18", "name": "可乐", "price": 4, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=可乐", "description": "可口可乐 330ml" },
+      { "id": "g19", "name": "凉拌黄瓜", "price": 8, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=黄瓜", "description": "清爽解腻，蒜香醋香" },
+      { "id": "g20", "name": "加米饭", "price": 2, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=米饭", "description": "东北大米，管够" },
+      { "id": "g60", "name": "黄焖鱼米饭", "price": 20, "image": "https://via.placeholder.com/120x80/3b82f6/fff?text=黄焖鱼", "description": "鲜鱼入味，汤鲜肉嫩" },
+      { "id": "g61", "name": "黄焖牛肉米饭", "price": 26, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=黄焖牛肉", "description": "牛肉软烂，酱香浓郁" },
+      { "id": "g62", "name": "皮蛋瘦肉粥", "price": 8, "image": "https://via.placeholder.com/120x80/a16207/fff?text=皮蛋粥", "description": "绵密顺滑，营养早餐" }
+    ]
+  },
+  {
+    "id": "s5",
+    "name": "沙县小吃",
+    "image": "https://via.placeholder.com/300x200/8b5cf6/fff?text=沙县",
+    "rating": 4.3,
+    "monthlySales": 5200,
+    "deliveryFee": 0,
+    "deliveryTime": 15,
+    "notice": "免费配送！馄饨 8 元起",
+    "goods": [
+      { "id": "g21", "name": "飘香拌面", "price": 8, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=拌面", "description": "花生酱拌面，经典味道" },
+      { "id": "g22", "name": "馄饨", "price": 8, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=馄饨", "description": "皮薄馅大，汤鲜味美" },
+      { "id": "g23", "name": "蒸饺（10个）", "price": 10, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=蒸饺", "description": "鲜肉馅，晶莹剔透" },
+      { "id": "g24", "name": "柳叶蒸饺", "price": 12, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=柳叶饺", "description": "皮薄馅大，一口一个" },
+      { "id": "g25", "name": "瓦罐汤", "price": 15, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=瓦罐汤", "description": "文火慢炖，养生之选" },
+      { "id": "g63", "name": "扁肉", "price": 9, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=扁肉", "description": "肉馅弹牙，汤底鲜香" },
+      { "id": "g64", "name": "炒米粉", "price": 10, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=炒米粉", "description": "干炒米粉，配料丰富" },
+      { "id": "g65", "name": "花生酱拌面（加蛋）", "price": 12, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=拌面蛋", "description": "花生酱拌面 + 煎蛋，饱腹感" }
+    ]
+  },
+  {
+    "id": "s6",
+    "name": "麦乐汉堡",
+    "image": "https://via.placeholder.com/300x200/ef4444/fff?text=汉堡",
+    "rating": 4.4,
+    "monthlySales": 6800,
+    "deliveryFee": 3,
+    "deliveryTime": 20,
+    "notice": "汉堡 + 薯条 + 可乐套餐立减 5 元",
+    "goods": [
+      { "id": "g26", "name": "经典牛肉堡", "price": 22, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=牛肉堡", "description": "安格斯牛肉饼，生菜番茄" },
+      { "id": "g27", "name": "香辣鸡腿堡", "price": 18, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=鸡腿堡", "description": "脆皮鸡腿排，酱香浓郁" },
+      { "id": "g28", "name": "薯条（大份）", "price": 12, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=薯条", "description": "外酥内软，金黄酥脆" },
+      { "id": "g29", "name": "鸡块（6块）", "price": 14, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=鸡块", "description": "鸡肉块，外酥里嫩" },
+      { "id": "g30", "name": "冰美式", "price": 10, "image": "https://via.placeholder.com/120x80/a16207/fff?text=冰美式", "description": "现磨咖啡，冰爽提神" },
+      { "id": "g66", "name": "双层牛肉堡", "price": 32, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=双层堡", "description": "双层牛肉饼，满足大胃口" },
+      { "id": "g67", "name": "洋葱圈", "price": 10, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=洋葱圈", "description": "金黄酥脆，洋葱甜香" },
+      { "id": "g68", "name": "圣代", "price": 8, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=圣代", "description": "香草冰淇淋，巧克力酱" }
+    ]
+  },
+  {
+    "id": "s7",
+    "name": "东北饺子馆",
+    "image": "https://via.placeholder.com/300x200/22c55e/fff?text=饺子",
+    "rating": 4.6,
+    "monthlySales": 2100,
+    "deliveryFee": 2,
+    "deliveryTime": 25,
+    "notice": "手工现包，每日限量",
+    "goods": [
+      { "id": "g31", "name": "猪肉白菜水饺（15个）", "price": 22, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=水饺", "description": "经典馅料，皮薄馅大" },
+      { "id": "g32", "name": "韭菜鸡蛋水饺（15个）", "price": 20, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=韭菜饺", "description": "韭菜鲜香，鸡蛋嫩滑" },
+      { "id": "g33", "name": "三鲜水饺（15个）", "price": 26, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=三鲜饺", "description": "虾仁猪肉韭菜，鲜上加鲜" },
+      { "id": "g34", "name": "锅贴（10个）", "price": 18, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=锅贴", "description": "底部金黄酥脆" },
+      { "id": "g35", "name": "小米粥", "price": 5, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=小米粥", "description": "温补养胃，暖胃暖心" },
+      { "id": "g69", "name": "酸菜猪肉水饺（15个）", "price": 22, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=酸菜饺", "description": "酸菜开胃，猪肉鲜香" },
+      { "id": "g70", "name": "猪肉炖粉条", "price": 28, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=炖粉条", "description": "东北硬菜，五花肉粉条" },
+      { "id": "g71", "name": "地三鲜", "price": 18, "image": "https://via.placeholder.com/120x80/8b5cf6/fff?text=地三鲜", "description": "茄子土豆青椒，素菜经典" }
+    ]
+  },
+  {
+    "id": "s8",
+    "name": "川味麻辣烫",
+    "image": "https://via.placeholder.com/300x200/ef4444/fff?text=麻辣烫",
+    "rating": 4.7,
+    "monthlySales": 3800,
+    "deliveryFee": 1,
+    "deliveryTime": 20,
+    "notice": "自选麻辣烫，按串计费",
+    "goods": [
+      { "id": "g36", "name": "麻辣烫套餐（素）", "price": 18, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=素麻辣烫", "description": "10 种素菜，麻辣鲜香" },
+      { "id": "g37", "name": "麻辣烫套餐（荤素）", "price": 28, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=荤麻辣烫", "description": "5 荤 10 素，料足味正" },
+      { "id": "g38", "name": "麻辣拌", "price": 20, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=麻辣拌", "description": "干拌不带汤，重口必备" },
+      { "id": "g39", "name": "酸辣粉", "price": 14, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=酸辣粉", "description": "红薯粉条，酸辣过瘾" },
+      { "id": "g40", "name": "冰粉", "price": 6, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=冰粉", "description": "红糖冰粉，解辣神器" },
+      { "id": "g72", "name": "麻辣香锅（小份）", "price": 32, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=香锅", "description": "自选食材，干锅翻炒" },
+      { "id": "g73", "name": "冒菜", "price": 22, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=冒菜", "description": "麻辣烫变体，一锅冒出来" },
+      { "id": "g74", "name": "狼牙土豆", "price": 10, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=狼牙土豆", "description": "花刀切法，麻辣入味" }
+    ]
+  },
+  {
+    "id": "s9",
+    "name": "寿司先生",
+    "image": "https://via.placeholder.com/300x200/3b82f6/fff?text=寿司",
+    "rating": 4.9,
+    "monthlySales": 1500,
+    "deliveryFee": 5,
+    "deliveryTime": 30,
+    "notice": "现做现送，保证新鲜",
+    "goods": [
+      { "id": "g41", "name": "三文鱼刺身（8片）", "price": 58, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=三文鱼", "description": "挪威三文鱼，入口即化" },
+      { "id": "g42", "name": "加州卷（8个）", "price": 32, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=加州卷", "description": "蟹肉牛油果，经典组合" },
+      { "id": "g43", "name": "鳗鱼饭", "price": 48, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=鳗鱼饭", "description": "蒲烧鳗鱼，酱香浓郁" },
+      { "id": "g44", "name": "味增汤", "price": 8, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=味增汤", "description": "传统日式，鲜香温热" },
+      { "id": "g45", "name": "抹茶冰淇淋", "price": 12, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=抹茶", "description": "宇治抹茶，浓郁回甘" },
+      { "id": "g75", "name": "天妇罗（5只）", "price": 28, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=天妇罗", "description": "虾仁蔬菜，金黄酥脆" },
+      { "id": "g76", "name": "刺身拼盘", "price": 88, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=刺身拼盘", "description": "三文鱼+金枪鱼+北极贝" },
+      { "id": "g77", "name": "日式拉面", "price": 32, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=日式拉面", "description": "豚骨汤底，叉烧卤蛋" }
+    ]
+  },
+  {
+    "id": "s10",
+    "name": "手工披萨屋",
+    "image": "https://via.placeholder.com/300x200/f59e0b/fff?text=披萨",
+    "rating": 4.5,
+    "monthlySales": 2600,
+    "deliveryFee": 4,
+    "deliveryTime": 35,
+    "notice": "手工现烤，9 寸 / 12 寸可选",
+    "goods": [
+      { "id": "g46", "name": "玛格丽特披萨（9寸）", "price": 38, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=玛格丽特", "description": "番茄罗勒莫扎瑞拉" },
+      { "id": "g47", "name": "夏威夷披萨（9寸）", "price": 42, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=夏威夷", "description": "火腿菠萝，经典搭配" },
+      { "id": "g48", "name": "超级至尊披萨（9寸）", "price": 52, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=至尊", "description": "五种肉类，豪华馅料" },
+      { "id": "g49", "name": "意面（番茄肉酱）", "price": 28, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=意面", "description": "手工意面，肉酱浓郁" },
+      { "id": "g50", "name": "蒜香面包", "price": 12, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=蒜香面包", "description": "外脆内软，蒜香黄油" },
+      { "id": "g78", "name": "培根披萨（9寸）", "price": 44, "image": "https://via.placeholder.com/120x80/ef4444/fff?text=培根披萨", "description": "烟熏培根，洋葱蘑菇" },
+      { "id": "g79", "name": "奶油蘑菇意面", "price": 30, "image": "https://via.placeholder.com/120x80/f59e0b/fff?text=奶油面", "description": "白酱蘑菇，浓郁奶香" },
+      { "id": "g80", "name": "凯撒沙拉", "price": 22, "image": "https://via.placeholder.com/120x80/22c55e/fff?text=凯撒沙拉", "description": "罗马生菜，帕尔马干酪" }
+    ]
+  }
+]
